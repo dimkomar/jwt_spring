@@ -55,7 +55,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User finByUserName(String username) {
-        return null;
+        User result = userRepository.findByUsername(username);
+        log.info("IN finByUserName user - {} found by username: {}", result.getFirstname(),username);
+        return result;
     }
 
     @Override
