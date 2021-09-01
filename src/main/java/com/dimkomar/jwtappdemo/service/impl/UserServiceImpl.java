@@ -56,7 +56,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public User finByUserName(String username) {
         User result = userRepository.findByUsername(username);
-        log.info("IN finByUserName user - {} found by username: {}", result.getFirstname(),username);
+        log.info("IN finByUserName user - {} found by username: {}", result,username);
         return result;
     }
 
@@ -67,7 +67,7 @@ public class UserServiceImpl implements UserService {
             log.warn("IN findById - no user found by id: {}", id);
             return null;
         }
-        log.info("IN finByUserName user - {} found by id: {}", result.getFirstname(),id);
+        log.info("IN finByUserName user - {} found by id: {}", result,id);
         return result;
     }
 

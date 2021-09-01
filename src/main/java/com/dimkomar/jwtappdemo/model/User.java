@@ -15,10 +15,10 @@ public class User extends BaseEntity{
     private String username;
 
     @Column(name = "first_name")
-    private String firstname;
+    private String firstName;
 
     @Column(name = "last_name")
-    private String lastname;
+    private String lastName;
 
     @Column(name = "email")
     private String email;
