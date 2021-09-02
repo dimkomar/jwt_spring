@@ -1,6 +1,8 @@
 package com.dimkomar.jwtappdemo.security;
 
 import com.dimkomar.jwtappdemo.model.User;
+import com.dimkomar.jwtappdemo.security.jwt.JwtUser;
+import com.dimkomar.jwtappdemo.security.jwt.JwtUserFactory;
 import com.dimkomar.jwtappdemo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,9 +32,9 @@ public class JwtUserDetailsService implements UserDetailsService {
             throw new UsernameNotFoundException("User with username: " + username + " not found");
         }
 
+        JwtUser jwtUser = JwtUserFactory.create(user);
+        log.info("IN loadByUserName - user with username: {} successfully loaded", username);
+        return jwtUser;
 
-
-
-        return null;
     }
 }
