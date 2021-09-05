@@ -15,7 +15,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final JwtTokenProvider jwtTokenProvider;
 
-    private static final String ADMIN_ENDPOINTS = "/api/v1/admin/*";
+    private static final String ADMIN_ENDPOINTS = "/api/v1/admin/**";
     private static final String LOGIN_ENDPOINTS = "/api/v1/auth/login";
 
 
