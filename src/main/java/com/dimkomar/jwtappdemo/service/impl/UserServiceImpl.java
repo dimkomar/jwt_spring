@@ -8,6 +8,7 @@ import com.dimkomar.jwtappdemo.repository.UserRepository;
 import com.dimkomar.jwtappdemo.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
